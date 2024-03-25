@@ -8,7 +8,7 @@ espressoCore = "3.5.1"
 lifecycleRuntimeKtx = "2.7.0"
 activityCompose = "1.8.2"
 composeBom = "2023.08.00"
-koin = "3.5.3"
+koin = "3.6.0-alpha3"
 koinExt = "3.0.2"
 navigation = "2.7.6"
 
