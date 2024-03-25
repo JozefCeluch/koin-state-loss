@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/modifiedactivityvm_shared_state_flow"
+  app:startDestination="@id/first_fragment">
+
+  <fragment
+    android:id="@+id/first_fragment"
+    android:name="com.example.koinstateloss.modifiedactivityvm.FirstFragment">
+
+    <argument
+      android:name="initial_state"
+      android:defaultValue="showing first"
+      app:argType="string"
+      app:nullable="false" />
+
+  </fragment>
+
+  <fragment
+    android:id="@+id/second_fragment"
+    android:name="com.example.koinstateloss.modifiedactivityvm.SecondFragment" />
+
+</navigation>
