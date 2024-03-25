@@ -46,10 +46,7 @@ class FirstFragment : Fragment() {
                 Text(text = "This screen shows the state set by nav args")
                 Text(text = "STATE: ${viewModel.sharedViewModel.state}")
                 Button(
-                    onClick = {
-                        viewModel.sharedViewModel.state = "seen first"
-                        findNavController().navigate(R.id.second_fragment)
-                    }
+                    onClick = { findNavController().navigate(R.id.second_fragment) }
                 ) {
                     Text(text = "Next")
                 }

@@ -10,6 +10,35 @@
 
   <fragment
     android:id="@+id/main_fragment"
-    android:name="com.example.koinstateloss.MainFragment" />
+    android:name="com.example.koinstateloss.MainFragment">
+
+    <action
+      android:id="@+id/open_nav_graph_flow"
+      app:destination="@id/navgraphvm_shared_state_flow">
+      <argument
+        android:name="initial_state"
+        app:argType="string"
+        app:nullable="false" />
+    </action>
+
+    <action
+      android:id="@+id/open_activity_flow"
+      app:destination="@id/activityvm_shared_state_flow">
+      <argument
+        android:name="initial_state"
+        app:argType="string"
+        app:nullable="false" />
+    </action>
+
+    <action
+      android:id="@+id/open_modified_activity_flow"
+      app:destination="@id/modifiedactivityvm_shared_state_flow">
+      <argument
+        android:name="initial_state"
+        app:argType="string"
+        app:nullable="false" />
+    </action>
+
+  </fragment>
 
 </navigation>

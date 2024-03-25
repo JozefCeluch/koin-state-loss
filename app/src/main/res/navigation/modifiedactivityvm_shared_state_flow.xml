@@ -10,7 +10,6 @@
 
     <argument
       android:name="initial_state"
-      android:defaultValue="showing first"
       app:argType="string"
       app:nullable="false" />
 

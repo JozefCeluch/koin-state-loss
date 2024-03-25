@@ -17,6 +17,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.koinstateloss.MainFragmentDirections.Companion.openActivityFlow
+import com.example.koinstateloss.MainFragmentDirections.Companion.openModifiedActivityFlow
+import com.example.koinstateloss.MainFragmentDirections.Companion.openNavGraphFlow
 import com.example.koinstateloss.ui.theme.KoinStateCrashTheme
 
 class MainActivity : AppCompatActivity() {
@@ -40,18 +43,20 @@ class MainFragment : Fragment() {
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Button(
-                    onClick = { findNavController().navigate(R.id.navgraphvm_shared_state_flow) }
+                    onClick = {
+                        findNavController().navigate(openNavGraphFlow("koin nav graph state"))
+                    }
                 ) {
                     Text(text = "Flow with koinNavGraphViewModel")
                 }
                 Button(
-                    onClick = { findNavController().navigate(R.id.activityvm_shared_state_flow) }
+                    onClick = { findNavController().navigate(openActivityFlow("activity nav graph state")) }
                 ) {
                     Text(text = "Flow with activityViewModel")
                 }
 
                 Button(
-                    onClick = { findNavController().navigate(R.id.modifiedactivityvm_shared_state_flow) }
+                    onClick = { findNavController().navigate(openModifiedActivityFlow("modified activity nav graph state")) }
                 ) {
                     Text(text = "Flow with modified activityViewModel")
                 }
