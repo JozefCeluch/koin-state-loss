@@ -14,3 +14,8 @@
 .externalNativeBuild
 .cxx
 local.properties
+/.idea/AndroidProjectSystem.xml
+/.idea/deploymentTargetSelector.xml
+/.idea/graphql-settings.xml
+/.idea/runConfigurations.xml
+/.idea/studiobot.xml
